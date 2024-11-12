@@ -65,14 +65,15 @@ if "username" in st.session_state.get("user", {}):
 else:
     st.sidebar.write("Please log in or sign up.")
 
-# Center the logo in the main content area using more columns
-logo_path = Path("static/logo.png")
-if logo_path.is_file():
-    cols = st.columns(10)  # Create nine columns
-    with cols[4]:  # Use the fifth column (index 4)
-        st.image(str(logo_path), width=200)  # Adjust width as needed
-else:
-    st.write("Logo not found in the specified path.")
+# Display the main heading for Estimark
+st.markdown(
+    """
+    <h1 style="text-align: center; font-size: 50px; margin-top: 0; padding-top: 0;">
+        Estimark
+    </h1>
+    """,
+    unsafe_allow_html=True
+)
 
 # Center the slogan
 st.markdown(
@@ -83,10 +84,3 @@ st.markdown(
     """,
     unsafe_allow_html=True
 )
-
-# Display Home.png at the bottom of the page
-home_image_path = Path("static/Home.png")
-if home_image_path.is_file():
-    st.image(str(home_image_path), use_column_width=True)
-else:
-    st.write("Home image not found in the specified path.")
