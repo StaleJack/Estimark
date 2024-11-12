@@ -65,22 +65,17 @@ if "username" in st.session_state.get("user", {}):
 else:
     st.sidebar.write("Please log in or sign up.")
 
-# Display the main heading for Estimark
-st.markdown(
-    """
-    <h1 style="text-align: center; font-size: 50px; margin-top: 0; padding-top: 0;">
-        Estimark
-    </h1>
-    """,
-    unsafe_allow_html=True
-)
-
-# Center the slogan
+# Title and tagline
 st.markdown(
     """
     <div style="text-align: center;">
+        <h1>Estimark</h1>
         <h3>Your research hub for entrepreneurial support</h3>
+        <p><i>Presented for the Youth Innovation Challenge and the CWI Entrepreneurial Lab</i></p>
+        <p style="font-size: small;">Managed and developed by Jacob Adler and Jack Staley</p>
     </div>
     """,
     unsafe_allow_html=True
 )
+
+# Remove references to logo and home image since they’re no longer used.
